@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1,user-scalable=no">
-    <title>一分钟了解霍金的一生</title>
+    <title>再见，满身侠气的老顽童-李敖</title>
     <link rel="stylesheet" type="text/css" href="https://mipcache.bdstatic.com/static/v1/mip.css">
-    <link rel="canonical" href="https://www.mipengine.org/story/hawking.html">
+    <link rel="canonical" href="https://www.mipengine.org/story/liao.html">
     <style mip-custom>
     * {
         margin: 0;
@@ -60,8 +60,8 @@
     @keyframes fade-in-and-transform {
         0%{
             opacity: 0;
-            transform: translateX(-5px);
-            -webkit-transform: translateX(-5px);
+            transform: translateX(-10px);
+            -webkit-transform: translateX(-10px);
         }
         100% {
             opacity:1;
@@ -69,11 +69,12 @@
             -webkit-transform: translateX(0px);
         }
     }
+
     @-webkit-keyframes fade-in-and-transform {
         0%{
             opacity: 0;
-            transform: translateX(-5px);
-            -webkit-transform: translateX(-5px);
+            transform: translateX(-10px);
+            -webkit-transform: translateX(-10px);
         }
         100% {
             opacity:1;
@@ -217,6 +218,52 @@
             -webkit-transform: scale(1, 1);
         }
     }
+    @keyframes fade-in-and-out {
+        0% {
+            opacity:0;
+        }
+
+        100%{
+            opacity:1;
+        }
+    }
+    @-webkit-keyframes fade-in-and-out {
+        0% {
+            opacity:0;
+        }
+        100%{
+            opacity:1;
+        }
+    }
+    @keyframes fade-out-and-in {
+        0% {
+            opacity:1;
+        }
+        90% {
+            opacity:1;
+        }
+        100%{
+            opacity:0;
+        }
+    }
+    @-webkit-keyframes fade-out-and-in {
+        0% {
+            opacity:1;
+        }
+        90% {
+            opacity:1;
+        }
+        100%{
+            opacity:0;
+        }
+    }
+    .fade-in {
+        opacity: 0;
+        animation: fade-in 1s linear;
+        -webkit-animation: fade-in 1s linear;
+        animation-fill-mode: forwards;
+        -webkit-animation-fill-mode: forwards;
+    }
     .mask {
         position: absolute;
         bottom: 0;
@@ -267,30 +314,23 @@
         bottom: 25px;
         width: 100%;
         opacity: 1;
-        animation: fade-in 2s ease;
-        -webkit-animation: fade-in 2s ease;
-        animation-fill-mode: forwards;
-        -webkit-animation-fill-mode: forwards;
-        opacity: 0;
         z-index: 101;
     }
-    .page2-wrap {
+    .fade-in-and-out {
+        opacity: 0;
+        display: block;
+        animation: fade-in-and-out 1s ease-in-out forwards;
+        -webkit-animation: fade-in-and-out 1s ease-in-out forwards;
+        animation-delay: 4s;
+        -webkit-animation-delay: 4s;
+    }
+    .fade-out-and-in {
         position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        top: 0;
-        width: 100%;
         opacity: 1;
-        animation: fade-in 2s ease;
-        -webkit-animation: fade-in 2s ease;
-        animation-fill-mode: forwards;
-        -webkit-animation-fill-mode: forwards;
-        opacity: 0;
-        z-index: 101;
-        text-align: center;
+        display: block;
+        animation: fade-out-and-in 3.5s ease-in-out forwards;
+        -webkit-animation: fade-out-and-in 3.5s ease-in-out forwards;
     }
-
     mip-story-layer span {
         display: block;
         text-align: left
@@ -310,152 +350,97 @@
         animation: shake-up-and-down 5s ease-in-out infinite;
         -webkit-animation: shake-up-and-down 5s ease-in-out infinite;
     }
-    .page1-wrap > :first-child {
-        font-size: 30px;
-        line-height: 36px;
-        color: #FFFFFF;
-        font-weight: bold;
-        margin-left: 40px;
+    .page1-wrap {
+        padding: 0px 20px 40px 20px;
+        position: absolute;
+        bottom: 0;
     }
-    .page1-wrap > :nth-child(2) {
+    .page1-wrap .content-title {
+        font-size: 24px;
+        color: #FFFFFF;
+        text-align: left;
+        margin-bottom: 15px;
+    }
+
+    .page1-wrap .content-desc {
         font-size: 18px;
         color: #FFFFFF;
-        margin: 14px 40px 20px 40px;
-        line-height: 30px;
+        text-align: left;
     }
     .page1-wrap .name {
-        font-size: 30px;
+        font-size: 36px;
         line-height: 34px;
         color: #FFFFFF;
         font-weight: bold;
         margin-left: 0px;
-        text-align: center;
+        text-align: left;
+        padding-left: 30px;
     }
     .page1-wrap .english-name {
         font-size: 18px;
         color: #808080;
-        text-align: center;
+        text-align: left;
         margin: 0;
-        margin-bottom: 30px;
-        margin-top: 2px;
+        margin-top: 5px;
+        padding-left: 30px;
     }
-
     .page1-wrap .date {
         font-size: 20px;
+        margin-top: 14px;
+        margin-bottom: 30px;
         color: #FFFFFF;
         text-align: center;
-        margin-bottom: 30px;
+        text-align: left;
+        padding-left: 30px;
     }
 
     .page1-wrap .desc {
         font-size: 18px;
         color: #FFFFFF;
         margin-left: 0px;
-        margin-top:  10px;
-        text-align: center;
-        margin-bottom: 10px;
-    }
-    .page2-wrap span {
-        font-size: 18px;
-        color: #FFFFFF;
-        margin: 14px 10px 20px 10px;
-        line-height: 28px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 80%;
-        transform: translate(-50%, -50%);
-        bottom: 0;
-    }
-    .page2-wrap span em {
-        font-style: normal;
-        font-size: 24px;
-        line-height: 28px;
-    }
-    .page7-wrap {
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        top: 0;
-        width: 100%;
-        opacity: 1;
-        animation: fade-in 2s ease;
-        -webkit-animation: fade-in 2s ease;
-        animation-fill-mode: forwards;
-        -webkit-animation-fill-mode: forwards;
-        z-index: 101;
+        margin-top:  5px;
+        color: #808080;
         text-align: left;
-        padding: 0 40px;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: 18px;
-        color: #FFFFFF;
-        line-height: 30px;
-    }
-
-    .page1-wrap .title-bottom {
-        font-size: 18px;
-        color: #FFFFFF;
-        margin: 14px 40px 20px 40px;
-        line-height: 30px;
-    }
-
-    .page1-wrap .title-center {
-        text-align: left;
-        margin-top: 50px;
-        margin-bottom: 10px;
-        font-size: 24px;
-    }
-
-   .last-animation {
-        animation: fade-in 2s ease !important;
-        -webkit-animation: fade-in 2s ease !important;
-    }
-    .noBottom {
-        margin-bottom: 0 !important;
+        margin-bottom: 5px;
+        padding-left: 30px;
     }
     .mip-backend {
         background-size: cover;
     }
+
     mip-story-view {
         display: none;
     }
-    .box {
-        width: 100px;
-        height: 100px;
-        background-color: #09f;
-        margin-top: 30px;
-        margin-left: auto;
-        margin-right: auto;
-    }
+
     </style>
 </head>
 <body>
-    <mip-story standalone background-audio="https://mip-extensions.bj.bcebos.com/story-hawkin%2Fmusic.mp3">
+    <mip-story standalone" background-audio="https://mip-extensions.bj.bcebos.com/story-liao%2Fliao-background.mp3">
         <script type="application/json">
         {
             "share": {
-                "thumbnail": "https://www.mipengine.org/static/img/mip-story/hawking/hawking-logo.png",
-                "background": "https://www.mipengine.org/static/img/mip-story/hawking/p9.jpg",
-                "title": "一分钟了解霍金的一生",
+                "thumbnail": "https://www.mipengine.org/static/img/mip-story/liao/logo.jpg",
+                "background": "https://www.mipengine.org/static/img/mip-story/liao/cover0.jpg",
+                "title": "再见，满身侠气的老顽童-李敖",
                 "from": "",
                 "readings": "10000"
             }
         }
         </script>
-        <mip-story-view>
+        <mip-story-view auto-advancement-after=3000>
             <mip-story-layer template="fill">
-                <mip-img height="720" src="https://www.mipengine.org/static/img/mip-story/hawking/p1.jpg"></mip-img>
+                <mip-img height="720" class="fade-in" src="https://www.mipengine.org/static/img/mip-story/liao/l1.jpg"></mip-img>
             </mip-story-layer>
             <mip-story-layer>
-                <div class="page1-wrap">
-                    <span class="name" id="hawking-name" aniamte-in="fade-in" aniamte-in-duration=1000>斯蒂芬·霍金</span>
-                    <span class="english-name" aniamte-in="fade-in" aniamte-in-duration=1000>Stephen Hawking</span>
-                    <span class="date" animate-in="fade-in" animate-in-after="kawking-name" animate-in-delay=1000  aniamte-in-duration=1000>1942.1.8 —— 2018.3.14
+                <div class="page1-wrap" animate-in="fly-in-left"  animate-in-duration=2000>
+                    <span class="name" animate-in="fly-in-top" animate-in-duration=2000>李敖</span>
+                    <span class="date" animate-in="fly-in-bottom" animate-in-delay="1000">1935.4.25 —— 2018.3.18
                     </span>
-                    <span class="desc" animate-in="fade-in" animate-in-after="kawking-name"  animate-in-delay=1000 aniamte-in-duration=1000>
-                    英国剑桥大学著名物理学家<br/>现代最伟大的物理学家之一
+                    <span class="desc" animate-in="fly-in-bottom" animate-in-delay="1000">
+                    作家 / 思想家
+                    </span>
+                    <span class="desc" animate-in="fly-in-bottom" animate-in-delay="1000">
+                    时事批评家 / 近代史学者
                     </span>
                 </div>
             </mip-story-layer>
@@ -464,80 +449,26 @@
             </mip-story-layer>
         </mip-story-view>
         <mip-story-view>
-            <mip-story-layer template="fill">
-                <mip-img height="720" class="fade-in-scale" src="https://www.mipengine.org/static/img/mip-story/hawking/p2.jpg"></mip-img>
+            <mip-story-layer template="fill" animate-in="fade-in" animate-in-duration=2000>
+                <mip-img height="720" class="fade-in" src="https://www.mipengine.org/static/img/mip-story/liao/l2.jpg"></mip-img>
             </mip-story-layer>
             <mip-story-layer>
                 <div class="page1-wrap">
-                    <span></span>
-                    <span animate-in="fly-in-bottom" animate-in-duration="3000">霍金21岁时患上肌肉萎缩性侧索硬化症，全身瘫痪，不能言语，仅有三根手指可以活动</span>
+                    <span class="content-title fade-in-and-transform">李敖生平</span>
+                        <span class="content-desc fade-in-and-transform">1935年，生于黑龙江哈尔滨</span>
+                        <span class="content-desc fade-in-and-transform">1949年，举家赴台，定居台中
+                        </span>
+                        <span class="content-desc fade-in-and-transform">1961年，发表批评国民党言论，被封杀入狱
+                        </span>
+                        <span class="content-desc fade-in-and-transform">2000年，凭长篇小说“北京法源寺”获诺贝尔文学奖提名
+                        </span>
                 </div>
-            </mip-story-layer>
-            <mip-story-layer>
-                <div class="mask"></div>
-            </mip-story-layer>
-        </mip-story-view>
-        <mip-story-view>
-            <mip-story-layer template="fill">
-                <mip-img class="scale-and-rotate" height="720" src="https://www.mipengine.org/static/img/mip-story/hawking/p3c.jpg"></mip-img>
-            </mip-story-layer>
-            <mip-story-layer>
-                <div class="page1-wrap">
-                    <span></span>
-                    <span animate-in="fly-in-top" animate-in-duration="2000">霍金一生致力于研究宇宙论和黑洞，证明了广义相对论的奇性定理和黑洞面积定理，提出了黑洞蒸发理论和无边界的霍金宇宙模型</span>
-                </div>
-            </mip-story-layer>
-            <mip-story-layer>
-                <div class="mask"></div>
-            </mip-story-layer>
-        </mip-story-view>
-        <mip-story-view>
-            <mip-story-layer template="fill">
-                <mip-img width="480" class="scale-and-transfrom" src="https://www.mipengine.org/static/img/mip-story/hawking/p4a.jpg"></mip-img>
-            </mip-story-layer>
-            <mip-story-layer>
-                <div class="page1-wrap">
-                    <span></span>
-                    <span animate-in="fly-in-left">
-                    1989年<br/>
-                    获得英国爵士荣誉称号，成为英国皇家学会学员、美国科学院外籍院士
-                    <br/>
-                    <br/>
-                    2009年
-                    <br/>
-                    获得自由勋章，由奥巴马亲自颁发</span>
-                </div>
-            </mip-story-layer>
-            <mip-story-layer>
-                <div class="mask"></div>
-            </mip-story-layer>
-        </mip-story-view>
-        <mip-story-view>
-            <mip-story-layer template="fill">
-                <mip-img class="fade-in-scale" height="720" src="https://www.mipengine.org/static/img/mip-story/hawking/p5.jpg"></mip-img>
-            </mip-story-layer>
-            <mip-story-layer>
-                <div class="page1-wrap">
-                    <span></span>
-                    <span animate-in="fly-in-right">霍金的著作《时间简史》与续作《果壳中的宇宙》用深入浅出的语言向我们描绘了宇宙最根本的样子</span>
-
-                </div>
-            </mip-story-layer>
-            <mip-story-layer>
-                <div class="mask"></div>
-            </mip-story-layer>
-        </mip-story-view>
-        <mip-story-view>
-            <mip-story-layer template="fill">
-                <mip-img height="720" class="fade-in-scale" src="https://www.mipengine.org/static/img/mip-story/hawking/p6.jpg"></mip-img>
-            </mip-story-layer>
-            <mip-story-layer>
-                <div class="page1-wrap">
-                    <span></span>
-                    <span animate-in="fly-in-right">
-                        霍金曾客串出演情景喜剧《生活大爆炸》
-                        <br>
-                        2014年，个人传记电影《万物理论》上映
+                <div class="page1-wrap fade-in-and-out">
+                    <span class="content-title fade-in-and-transform">李敖生平</span>
+                    <span class="content-desc fade-in-and-transform">2004年，参加“中华民国立法委员”选举，获得当选
+                    </span>
+                    <span class="content-desc fade-in-and-transform">2011年，重返政坛，入围首批十名亲民党民意代表之一</span>
+                    <span class="content-desc fade-in-and-transform">2013年，参加台湾电视节目点名批评马英九
                     </span>
                 </div>
             </mip-story-layer>
@@ -547,18 +478,27 @@
         </mip-story-view>
         <mip-story-view>
             <mip-story-layer template="fill">
-                <mip-img class="fade-in-scale" height="720" src="https://www.mipengine.org/static/img/mip-story/hawking/p7.jpg"></mip-img>
+                <mip-img height="720" class="fade-in" src="https://www.mipengine.org/static/img/mip-story/liao/l3a.jpg"></mip-img>
             </mip-story-layer>
             <mip-story-layer>
-                <div class="page1-wrap fade-in">
-                    <span></span>
-                    <span animate-in="fade-in" id="yuyan" class="title-center" animate-in-duration="2000">霍金曾做出以下预言</span>
-                    <span class="title-bottom" animate-in="rotate-in-right" animate-in-after="yuyan" animate-in-duration="2000">
-                        2032年 地球进入冰河时代<br/>
-                        2060年 人类必须离开地球<br/>
-                        2100年 人类进入外太空新人种出现<br/>
-                        2215年 地球将面临灾难性毁灭<br/>
-                        2600年 地球变成炽热的火球<br/>
+                <div class="page1-wrap">
+                    <span class="content-title fade-in-and-transform">李敖著作</span>
+                    <span class="content-desc fade-in-and-transform">《北京法源寺》《阳痿美国》《李敖有话说》《红色11》等100多本著作，被西方传媒追捧为“中国近代最杰出的批评家”</span>
+                </div>
+            </mip-story-layer>
+            <mip-story-layer>
+                <div class="mask"></div>
+            </mip-story-layer>
+        </mip-story-view>
+        <mip-story-view>
+            <mip-story-layer template="fill">
+                <mip-img height="720" class="fade-in" src="https://www.mipengine.org/static/img/mip-story/liao/l4.jpg"></mip-img>
+            </mip-story-layer>
+            <mip-story-layer>
+                <div class="page1-wrap">
+                    <span class="content-title fade-in-and-transform">感情生活</span>
+                    <span class="content-desc fade-in-and-transform">五次恋爱，两段婚姻</span>
+                    <span class="content-desc fade-in-and-transform">李敖说：我只是想要纯粹的爱情
                     </span>
                 </div>
             </mip-story-layer>
@@ -568,82 +508,50 @@
         </mip-story-view>
         <mip-story-view>
             <mip-story-layer template="fill">
-                <mip-img height="720" class="fade-out-minsize" src="https://www.mipengine.org/static/img/mip-story/hawking/p8.jpg"></mip-img>
+                <mip-img height="720" class="fade-in" src="https://www.mipengine.org/static/img/mip-story/liao/l5.jpg"></mip-img>
             </mip-story-layer>
             <mip-story-layer>
-                <span></span>
                 <div class="page1-wrap">
-                    <span></span>
-                    <span animate-in="rotate-in-left">
-                    生于伽利略忌日<br/>
-                    卒于爱因斯坦诞辰<br/>
-                    世间再无霍金<br/>
-                    时间永留简史<br/>
-                    他去了属于他自己的浩瀚宇宙</span>
+                    <span class="content-title fade-in-and-transform">政坛生涯</span>
+                    <span class="content-desc fade-in-and-transform">李敖为反对独裁，曾两次入狱</span>
+                    <span class="content-desc fade-in-and-transform">为普通民众振臂高呼：公论所在，蔚为重镇
+                    </span>
                 </div>
             </mip-story-layer>
             <mip-story-layer>
                 <div class="mask"></div>
             </mip-story-layer>
         </mip-story-view>
-         <mip-story-view>
-            <mip-story-layer template="vertical">
-                <h1>fade-in</h1>
-                <div animate-in="fly-in-left fade-in" class="box"></div>
+        <mip-story-view>
+            <mip-story-layer template="fill">
+                <mip-img height="720" class="fade-in" src="https://www.mipengine.org/static/img/mip-story/liao/l6a.gif"></mip-img>
+            </mip-story-layer>
+            <mip-story-layer>
+                <div class="page1-wrap">
+                    <span class="content-title fade-in-and-transform">经典言论</span>
+                    <span class="content-desc fade-in-and-transform">狂人依旧</span>
+                    <span class="content-desc fade-in-and-transform">我生平有两大遗憾，一是我无法找到像李敖这样精彩的人做我的朋友，二是无法坐到台下去听李敖的精彩演说
+                    </span>
+                </div>
+            </mip-story-layer>
+            <mip-story-layer>
+                <div class="mask"></div>
             </mip-story-layer>
         </mip-story-view>
         <mip-story-view>
-            <mip-story-layer template="vertical">
-                <h1>fly-in-top</h1>
-                <div animate-in="fly-in-top" class="box"></div>
+            <mip-story-layer template="fill">
+                <mip-img height="720" class="fade-in" src="https://www.mipengine.org/static/img/mip-story/liao/l7.jpg"></mip-img>
             </mip-story-layer>
-        </mip-story-view>
-        <mip-story-view>
-            <mip-story-layer template="vertical">
-                <h1>fly-in-bottom</h1>
-                <div class="box" animate-in="fly-in-bottom"></div>
+            <mip-story-layer>
+                <div class="page1-wrap">
+                    <span class="content-title fade-in-and-transform">遗憾及寄语</span>
+                    <span class="content-desc fade-in-and-transform">李敖数次访问大陆，主张以一国两制方式实现两岸和平统一</span>
+                    <span class="content-desc fade-in-and-transform">如今大师已逝，希望两岸早日统一
+                    </span>
+                </div>
             </mip-story-layer>
-        </mip-story-view>
-        <mip-story-view>
-            <mip-story-layer template="vertical">
-                <h1>fly-in-left</h1>
-                <div class="box" animate-in="fly-in-left"></div>
-            </mip-story-layer>
-        </mip-story-view>
-        <mip-story-view>
-            <mip-story-layer template="vertical">
-                <h1>fly-in-right</h1>
-                <div class="box" animate-in="fly-in-right"></div>
-            </mip-story-layer>
-        </mip-story-view>
-        <mip-story-view>
-            <mip-story-layer template="vertical">
-                <h1>twirl-in</h1>
-                <div class="box" animate-in="twirl-in"></div>
-            </mip-story-layer>
-        </mip-story-view>
-        <mip-story-view>
-            <mip-story-layer template="vertical">
-                <h1>whoosh-in-left</h1>
-                <div class="box" animate-in="whoosh-in-left"></div>
-            </mip-story-layer>
-        </mip-story-view>
-        <mip-story-view>
-            <mip-story-layer template="vertical">
-                <h1>whoosh-in-right</h1>
-                <div class="box" animate-in="whoosh-in-right"></div>
-            </mip-story-layer>
-        </mip-story-view>
-        <mip-story-view>
-            <mip-story-layer template="vertical">
-                <h1>rotate-in-left</h1>
-                <div class="box" animate-in="rotate-in-left"></div>
-            </mip-story-layer>
-        </mip-story-view>
-        <mip-story-view>
-            <mip-story-layer template="vertical">
-                <h1>rotate-in-right</h1>
-                <div class="box" animate-in="rotate-in-right"></div>
+            <mip-story-layer>
+                <div class="mask"></div>
             </mip-story-layer>
         </mip-story-view>
     </mip-story>
@@ -659,19 +567,19 @@
     <script type="application/ld+json">
         {
             "@context": "https://ziyuan.baidu.com/contexts/cambrian.jsonld",
-            "@id": "https://www.mipengine.org/static/img/mip-story/hawking/p9.jpg",
+            "@id": "https://www.mipengine.org/static/img/mip-story/logo/cover0.jpg",
             "appid": "1589820413983913",
-            "title": "一分钟了解霍金的一生",
+            "title": "再见，满身侠气的老顽童-李敖",
             "images": [
-                "https://www.mipengine.org/static/img/story/"
+                "https://www.mipengine.org/static/img/story/cover0.jpg"
                 ],
-            "description": "一分钟了解霍金的一生",
-            "pubDate": "2018-03-9T08:00:01"
+            "description": "再见，满身侠气的老顽童-李敖",
+            "pubDate": "2018-03-18T18:00:01"
         }
     </script>
     <script src="https://c.mipcdn.com/static/v1/mip.js"></script>
-    <script src="./web-animation.js"></script>
     <script src="./mip-share.js"></script>
+    <script src="./web-animation.js"></script>
     <script src="./mip-story.js"></script>
     <script src="https://c.mipcdn.com/static/v1/mip-stats-baidu/mip-stats-baidu.js"></script>
     <script src="https://c.mipcdn.com/extensions/platform/v1/mip-cambrian/mip-cambrian.js"></script>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html mip>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="width">
+    <meta name="renderer" content="webkit" />
+    <title>无限下拉demo2</title>
+    <link rel="stylesheet" type="text/css" href="https://c.mipcdn.com/static/v1/mip.css">
+    <link rel="canonical" href="http://www.chuangyejia.com/#">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<noscript>
+    <style mip-officialrelease>
+        body {
+            -webkit-animation: none;
+            -moz-animation: none;
+            -ms-animation: none;
+            animation: none;
+        }
+    </style>
+</noscript>
+
+<body class="body">
+    <div class="main-wrap">
+        <div id="content" class="main-content">
+            <mip-list template="mip-template-id" src="https://www.chuangyejia.vip/mip/list-new-mip" id="mip-list" has-more pnName="pageNum"
+                pn=2 timeout="3000" preLoad>
+                <template type="mip-mustache" id="mip-template-id">
+                    <div>
+                        <li>{{title}}: {{catid}}</li>
+                    </div>
+                </template>
+            </mip-list>
+            <div class="mip-list-more" on="tap:mip-list.more"> 点击查看更多 </div>
+            <div>
+                <mip-infinitescroll data-src="https://www.chuangyejia.vip/mip/list-new-mip">
+                    <script type="application/json">
+                        {
+                            "rn": 1500,
+                            "prn": 5,
+                            "pn": 1,
+                            "pnName": "pn",
+                            "bufferHeightPx": 150,
+                            "loadingHtml": "正在加载",
+                            "loadFailHtml": "加载失败",
+                            "loadOverHtml": "请求成功"
+                        }
+                    </script>
+                    <template type="mip-mustache">
+                        <li>
+                          <a>aaaaaaaaaaaa</a>
+                        </li>
+                    </template>
+                    <div class="mip-infinitescroll-results"></div>
+                    <div class="mip-infinitescroll-loading"></div>
+                </mip-infinitescroll>
+            </div>
+        </div>
+        <!-- 最底部跳转标签 (宽度撑满整个页面)-->
+        <!-- 底部悬浮框 -->
+        <mip-fixed type="bottom" id="customid">
+            <a href="#" data-type="mip" class="download-box">
+                <ul>
+                    <li>
+                        <mip-img layout="fixed" src="img/images(1).jpeg"></mip-img>
+                    </li>
+                    <li>
+                        <mip-img layout="fixed" src="img/images(1).jpeg"></mip-img>
+                    </li>
+                    <li>
+                        <mip-img layout="fixed" src="img/images(1).jpeg"></mip-img>
+                    </li>
+                </ul>
+                <p>
+                    <span class="top-span">年薪百万的人都在看</span>
+                    <span class="bottom-span">读懂中国最赚钱的7000种生意</span>
+                </p>
+                <span class="download-btn">立即打开</span>
+
+                <span class="close-download" on="tap:customid.close"></span>
+            </a>
+        </mip-fixed>
+        <div class="show-dialog">正在为您跳转，请稍等...</div>
+    </div>
+
+    <script type="text/javascript" src="https://c.mipcdn.com/static/v1/mip.js"></script>
+    <!-- 分享组件 -->
+    <script type="text/javascript" src="https://c.mipcdn.com/static/v1/mip-share/mip-share.js"></script>
+    <!-- 快速回到顶部 -->
+    <script type="text/javascript" src="https://c.mipcdn.com/static/v1/mip-gototop/mip-gototop.js"></script>
+    <!-- 折叠隐藏节点 -->
+    <script type="text/javascript" src="https://c.mipcdn.com/static/v1/mip-accordion/mip-accordion.js"></script>
+    <!-- 显示更多 -->
+    <script type="text/javascript" src="https://c.mipcdn.com/static/v1/mip-showmore/mip-showmore.js"></script>
+    <!-- 底部悬浮框 -->
+    <script type="text/javascript" src="https://c.mipcdn.com/static/v1/mip-fixed/mip-fixed.js"></script>
+    <!-- 滑动悬浮组件 -->
+    <script type="text/javascript" src="https://c.mipcdn.com/static/v1/mip-semi-fixed/mip-semi-fixed.js"></script>
+    <!-- 横向滑动组件 -->
+    <script type="text/javascript" src="https://c.mipcdn.com/static/v1/mip-scrollbox/mip-scrollbox.js"></script>
+    <!-- 弹出层组件 -->
+    <script type="text/javascript" src="https://c.mipcdn.com/static/v1/mip-lightbox/mip-lightbox.js"></script>
+    <!-- 切换组件 -->
+    <script type="text/javascript" src="https://c.mipcdn.com/static/v1/mip-vd-tabs/mip-vd-tabs.js"></script>
+    <!--无限加载  -->
+    <script type="text/javascript" src="https://c.mipcdn.com/static/v1/mip-infinitescroll/mip-infinitescroll.js"></script>
+    <script type="text/javascript" src="https://c.mipcdn.com/static/v1/mip-mustache/mip-mustache.js"></script>
+    <!-- mip-list 组件执行依赖以下两个 JS -->
+    <script src="https://c.mipcdn.com/static/v1/mip-list/mip-list.js"></script>
+    <script src="https://c.mipcdn.com/static/v1/mip-mustache/mip-mustache.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,378 @@
+body {
+  position: relative;
+}
+.body {
+  background: #fff;
+}
+.main-bg,
+.main-content {
+  background: #fff;
+}
+#content .bottom {
+  color: #999;
+  text-align: center;
+  margin-top: 0.633333333rem;
+  line-height: 0.493333333333333rem;
+  font-size: 0.346666666666667rem;
+}
+#content .temps {
+  height: 1.513333333333333rem;
+}
+#content .refresh {
+  position: fixed;
+  right: .2rem;
+  bottom: 2.5rem;
+}
+#content .refresh img {
+  height: 1.066666667rem;
+}
+.padding-l-r-34 {
+  padding-left: 0.3466666666666667rem;
+  padding-right: 0.3466666666666667rem;
+}
+.nav-bg {
+  background: #F73B42;
+  color: #fff!important;
+}
+.main-wrap h1,
+.main-wrap h2,
+.main-wrap h3,
+.main-wrap h4,
+.main-wrap h5,
+.main-wrap h6 {
+  padding-bottom: 0.8rem;
+  font-size: 0.666666rem;
+  font-weight: bold;
+  line-height: 0.88rem;
+  color: #2b2b2b;
+  margin-top: 0.3466666666666667rem;
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+  text-align: justify;
+}
+.main-wrap .header {
+  height: 1.466666666666667rem;
+  display: flex;
+  border-bottom: 1px solid #dedede;
+}
+.main-wrap .header .logo {
+  margin-top: 0.266666666666667rem;
+  width: 1.786666666666667rem;
+  height: 0.933333333333333rem;
+}
+.main-wrap .header .header-s {
+  margin-left: 2%;
+  position: relative;
+  width: 70%;
+}
+.main-wrap .header .header-s input {
+  width: 80%;
+  border-radius: 2px;
+  font-size: 0.37333333rem;
+  height: 0.88rem;
+  line-height: 0.88rem;
+  margin-top: 0.266666666666667rem;
+  text-indent: 10px;
+  background: #EBEBEB;
+  color: #999;
+}
+.main-wrap .header .header-s b {
+  position: absolute;
+  left: 80%;
+  top: 0.266666666666667rem;
+  background: #333;
+  width: 1.36rem;
+  height: 0.88rem;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+.main-wrap .header .header-s b .search {
+  height: 0.533333333rem;
+  width: 0.533333333rem;
+  margin-left: 0.4rem;
+  margin-top: 0.153333333rem;
+}
+.main-wrap .header .down {
+  border-radius: 2px;
+  width: 1.226666666666667rem;
+  height: 0.88rem;
+  margin-left: 4%;
+  margin-top: 0.266666666666667rem;
+  border: 1px solid #333;
+}
+.main-wrap .header .down img {
+  height: 0.533333333333333rem;
+  width: 0.453333333333333rem;
+  margin-left: 0.333333333333333rem;
+  margin-top: 0.133333333333333rem;
+}
+.main-wrap .main .more-btn {
+  width: 5.58666667rem;
+  height: 1.013333333rem;
+  background: #ffeaea url(../img/more-new.png) no-repeat 4.2rem center;
+  background-size: 0.42666667rem 0.24rem;
+  display: block;
+  text-align: center;
+  color: #AB3C3C;
+  font-size: 0.4rem;
+  border-radius: 2px;
+  margin: 0.266666667rem auto;
+  line-height: 1.013333333rem;
+}
+.main-wrap .main .more-btn span {
+  padding-right: .266666667rem;
+}
+.main-wrap .main .loading-btn {
+  width: 5.58666667rem;
+  height: 1.01333333rem;
+  background: #ffeaea url(../img/load-new.png) no-repeat 3.93333333rem center;
+  background-size: 0.34666667rem 0.34666667rem;
+  display: block;
+  line-height: 1.01333333rem;
+  text-align: center;
+  color: #AB3C3C;
+  font-size: 0.4rem;
+  border-radius: 2px;
+  margin: 0.26666667rem auto;
+}
+.main-wrap .main-list #showdiv {
+  display: none;
+}
+.main-wrap .main-list dl {
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+  overflow: hidden;
+  position: relative;
+  border-bottom: 1px solid #E6E6E6;
+}
+.main-wrap .main-list dl:last-child {
+  border-bottom: none;
+}
+.main-wrap .main-list dl a {
+  cursor: pointer;
+  display: block;
+  display: flex;
+}
+.main-wrap .main-list dl dt {
+  flex: 3;
+  overflow: hidden;
+}
+.main-wrap .main-list dl dt p {
+  margin-top: 0.133333333rem;
+  width: auto;
+  height: 2.093333333rem;
+  overflow: hidden;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  border-radius: 2px;
+}
+.main-wrap .main-list dl dt p img {
+  width: 100%;
+  height: 100%;
+}
+.main-wrap .main-list dl .have-img {
+  margin-left: 0.01rem;
+}
+.main-wrap .main-list dl .have-img .data-box {
+  margin-top: .266666667rem;
+}
+.main-wrap .main-list dl .have-img .data-box span {
+  font-size: 0.29333333rem;
+  display: inline-block;
+}
+.main-wrap .main-list dl .have-img .data-box .count,
+.main-wrap .main-list dl .have-img .data-box .time {
+  padding-left: .533333333rem;
+}
+.main-wrap .main-list dl .have-img .img-list {
+  display: flex;
+  margin-top: -0.6rem;
+  overflow: hidden;
+}
+.main-wrap .main-list dl .have-img .img-list li {
+  flex: 1;
+  text-align: center;
+  height: 2.093333333rem;
+  overflow: hidden;
+}
+.main-wrap .main-list dl .have-img .img-list li p {
+  width: 96%;
+  height: 2.093333333rem;
+  overflow: hidden;
+  border-radius: 4px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  border-radius: 2px;
+  background-position: center center;
+}
+.main-wrap .main-list dl .have-img .img-list li p img {
+  width: 100%;
+  height: 100%;
+}
+.main-wrap .main-list dl .imgnull {
+  margin-left: 0.01rem;
+}
+.main-wrap .main-list dl .imgnull .data-box {
+  margin-top: -0.4rem;
+}
+.main-wrap .main-list dl .imgnull .data-box span {
+  margin-right: 0.3rem;
+}
+.main-wrap .main-list dl dd {
+  flex: 7;
+  position: relative;
+  margin-left: 0.4rem;
+}
+.main-wrap .main-list dl dd .read-list {
+  color: #777777;
+  font-size: 22px;
+}
+.main-wrap .main-list dl dd h1 {
+  color: #333;
+  font-size: 0.4rem;
+  font-weight: bold;
+  line-height: 0.666666667rem;
+  word-break: break-word;
+  margin-top: 0.066666667rem;
+}
+.main-wrap .main-list dl dd h1 a:hover {
+  color: #8D1A1E;
+}
+.main-wrap .main-list dl dd .data-box {
+  color: #BCBCBC;
+  font-size: .293333333rem;
+  margin-top: -0.53333333rem;
+}
+.main-wrap .main-list dl dd .data-box span {
+  margin-right: 0.133333333rem;
+}
+.main-wrap .main-list dl dd .data-box .border {
+  border: 1px solid #F73B42;
+  display: inline-block;
+  font-size: 0.21333333rem;
+  color: #F73B42;
+  border-radius: 2px;
+  margin-top: -0.3rem;
+  line-height: 0.346666rem;
+  text-align: center;
+  padding: 0.033333rem 0.16rem;
+}
+.main-wrap .main-list dl dd .data-box .count {
+  background: url(../img/count.png) no-repeat left center;
+  background-size: 0.26666667rem 0.24rem;
+  padding-left: 0.4rem;
+}
+.main-wrap .main-list dl dd .data-box .time {
+  background: url(../img/group.png) no-repeat left center;
+  background-size: 0.26666667rem 0.26666667rem;
+  padding-left: 0.33333333rem;
+}
+.download-box {
+  background: url(../img/download-bottom.png) no-repeat;
+  background-size: 100% 1.466666rem;
+  width: 100%;
+  height: 1.22666667rem;
+  display: block;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  cursor: pointer;
+  z-index: 4;
+}
+.download-box ul {
+  position: relative;
+}
+.download-box ul li {
+  width: 0.8rem;
+  height: 0.8rem;
+}
+.download-box ul li img {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  border: 0.03333333rem solid #d60303;
+}
+.download-box ul li:nth-child(1) {
+  position: absolute;
+  left: 0.37333333rem;
+  top: 0.16rem;
+  z-index: 1;
+}
+.download-box ul li:nth-child(2) {
+  position: absolute;
+  left: 0.68rem;
+  top: 0.16rem;
+  z-index: 10;
+}
+.download-box ul li:nth-child(3) {
+  position: absolute;
+  left: 1.08rem;
+  top: 0.16rem;
+  z-index: 99;
+}
+.download-box p {
+  margin-left: 2.16rem;
+  margin-top: 0.13333333rem;
+  line-height: 0.46666667rem;
+  float: left;
+}
+.download-box p span {
+  display: block;
+}
+.download-box p .top-span {
+  color: #fff;
+  font-size: 0.37333333rem;
+}
+.download-box p .bottom-span {
+  color: #AB040D;
+  font-size: 0.26666667rem;
+  font-weight: bold;
+}
+.download-box .download-btn {
+  background: #fff;
+  border-radius: 0.04rem;
+  color: #000;
+  position: absolute;
+  top: 0.21333333rem;
+  right: 1.02666667rem;
+  font-size: 0.346666rem;
+  width: 2rem;
+  height: 0.74666667rem;
+  line-height: 0.74666667rem;
+  text-align: center;
+  box-shadow: -2px 1px 14px #f74e35;
+}
+.download-box .download-btn strong {
+  display: inline-block;
+  color: #E73F3F;
+  font-size: 0.293333rem;
+  font-weight: normal;
+  background: url(../img/gold.png) no-repeat right center;
+  background-size: 0.346666rem 0.346666rem;
+  padding-right: 0.413333rem;
+}
+.download-box .close-download {
+  background: url(../img/close-download.png) no-repeat;
+  background-size: 0.34666667rem;
+  width: 0.34666667rem;
+  height: 0.34666667rem;
+  position: absolute;
+  top: 0.42666667rem;
+  right: 0.37333333rem;
+}
+.show-dialog {
+  display: none;
+}
+.mip-layout-size-defined .mip-fill-content {
+  position: static;
+}
+img {
+  width: auto;
+}

@@ -1,0 +1,6 @@
+@media screen and (orientation: portrait) {  
+    /*竖屏 css*/  
+    .download-box{
+        display: block;
+    }
+  } 

@@ -14,7 +14,6 @@
     }
     @keyframes fade-in {
         0%{
-            opacity: 0;
         }
         100%{
             opacity:1;
@@ -22,7 +21,6 @@
     }
     @-webkit-keyframes fade-in {
         0%{
-            opacity: 0;
         }
         100%{
             opacity:1;
@@ -41,7 +39,6 @@
     }
     @-webkit-keyframes fade-in-out {
         0%{
-            opacity: 0;
         }
         90%{
             opacity:1;
@@ -52,41 +49,32 @@
     }
     @keyframes scale {
         0%{
-            opacity: 1;
             transform: scale(1, 1);
             -webkit-transform: scale(1, 1);
         }
         100%{
-            opacity: 1;
             transform: scale(1.1, 1.1);
             -webkit-transform: scale(1.1, 1.1);
         }
     }
     @-webkit-keyframes scale {
         0%{
-            opacity: 1;
             transform: scale(1, 1);
             -webkit-transform: scale(1, 1);
         }
         100%{
-            opacity: 1;
             transform: scale(1.1, 1.1);
             -webkit-transform: scale(1.1, 1.1);
         }
     }
     .fade-in {
         transform-origin: 50% 5%;
-        animation: fade-in 1s ease;
-        -webkit-animation: fade-in 1s ease;
         animation-fill-mode: forwards;
         -webkit-animation-fill-mode: forwards;
     }
     .fade-in-scale {
         display: none;
-        opacity: 0;
         transform-origin: 50% 5%;
-        animation: scale 4.8s linear;
-        -webkit-animation: scale 4.8s linear;
         animation-fill-mode: forwards;
         -webkit-animation-fill-mode: forwards;
     }
@@ -96,12 +84,8 @@
         right: 0;
         bottom: 40px;
         width: 100%;
-        opacity: 1;
-        animation: fade-in 2s ease;
-        -webkit-animation: fade-in 2s ease;
         animation-fill-mode: forwards;
         -webkit-animation-fill-mode: forwards;
-        opacity: 0;
         z-index: 101;
     }
     mip-story-layer span {
@@ -197,11 +181,8 @@
         left: 0;
         right: 0;
         bottom: 0;
-        animation: fade-in 2s eas;
-        -webkit-animation: fade-in 2s ease;
         animation-fill-mode: forwards;
         -webkit-animation-fill-mode: forwards;
-        opacity: 0;
         padding: 0 40px 40px 40px;
         z-index: 101;
     }
@@ -244,30 +225,21 @@
         text-align: left;
     }
     .common-wrap3 > :first-child {
-        animation: fade-in 3s ease;
-        -webkit-animation: fade-in 3s ease;
     }
     .common-wrap3 > :nth-child(2) {
         margin-top: 14px;
         font-size: 20px;
         line-height: 20px;
         color: #f3d78e;
-        animation: fade-in 3s ease;
-        -webkit-animation: fade-in 3s ease;
     }
     .common-wrap3 > :nth-child(3) {
         margin-top: 49px;
-        animation: fade-in-out 3s ease;
-        -webkit-animation: fade-in-out 3s ease;
         animation-fill-mode: forwards;
         -webkit-animation-fill-mode: forwards;
     }
     .common-wrap3 > :nth-child(4) {
         position: absolute;
         bottom: 0;
-        opacity: 0;
-        animation: fade-in 3s ease 3s;
-        -webkit-animation: fade-in 3s ease 3s;
         animation-fill-mode: forwards;
         -webkit-animation-fill-mode: forwards;
     }
@@ -285,8 +257,6 @@
         color: #fff;
     }
     .last-animation {
-        animation: fade-in 2s ease !important;
-        -webkit-animation: fade-in 2s ease !important;
     }
     .noBottom {
         margin-bottom: 0 !important;
@@ -420,14 +390,14 @@
         </script>
         <mip-story-view>
             <mip-story-layer template="fill">
-                <mip-img  layout="responsive" width="480" class="fade-in-scale" height="720" src="https://www.mipengine.org/static/img/mip-story/p1.png" layout="responsive"></mip-img>
+                <mip-img animate-in="scale-in" animate-in-duration="5s" layout="responsive" width="480" class="fade-in-scale" height="720" src="https://www.mipengine.org/static/img/mip-story/p1.png" layout="responsive"></mip-img>
             </mip-story-layer>
             <mip-story-layer>
                 <div class="page1-wrap">
-                    <span>第90届奥斯卡</span>
-                    <span>The 90th Oscar</span>
-                    <span class="line"></span>
-                    <span>颁奖典礼回顾</span>
+                    <span animate-in="fade-in-top" id="aaaa" animate-in-duration="2s" >第90届奥斯卡</span>
+                    <span animate-in="fade-in-top" animate-in-duration="2s">The 90th Oscar</span>
+                    <span animate-in="fade-in-top" class="line" animate-in-duration="2s"></span>
+                    <span animate-in="fade-in-bottom" animate-in-after="aaaa" animate-in-duration="1s">颁奖典礼回顾</span>
                 </div>
             </mip-story-layer>
             <mip-story-layer>
@@ -442,10 +412,10 @@
                 <div class="common-wrap1">
                     <span></span>
                     <span animate-in="fade-in" id="first-animation">最佳影片</span>
-                    <span animate-in="fly-in-left" animate-in-duration="400ms" animate-in-after="first-animation">水形物语</span>
+                    <span animate-in="fade-in-left" animate-in-duration="400ms" animate-in-after="first-animation">水形物语</span>
                     <span></span>
                     <span animate-in="fade-in" id="first-animation">最佳导演</span>
-                    <span animate-in="fly-in-right" animate-in-duration="0.4s" animate-in-after="first-animation">吉尔莫·德尔·托罗</span>
+                    <span animate-in="fade-in-right" animate-in-duration="0.4s" animate-in-after="first-animation">吉尔莫·德尔·托罗</span>
                 </div>
             </mip-story-layer>
             <mip-story-layer>
@@ -460,9 +430,9 @@
                 <div class="common-wrap2">
                     <span></span>
                     <span animate-in="fade-in" id="second-animation">最佳男主角</span>
-                    <span animate-in="fly-in-left" animate-in-duration=400ms animate-in-after="second-animation" id="second-animation-2">加里·奥德曼</span>
-                    <span animate-in="fly-in-left" animate-in-duration="0.4s" animate-in-after="second-animation-2">主演</span>
-                    <span animate-in="fly-in-left" animate-in-duration="400ms" animate-in-after="second-animation-2">至暗时刻</span>
+                    <span animate-in="fade-in-left" animate-in-duration=400ms animate-in-after="second-animation" id="second-animation-2">加里·奥德曼</span>
+                    <span animate-in="fade-in-left" animate-in-duration="0.4s" animate-in-after="second-animation-2">主演</span>
+                    <span animate-in="fade-in-left" animate-in-duration="400ms" animate-in-after="second-animation-2">至暗时刻</span>
                 </div>
             </mip-story-layer>
             <mip-story-layer>
@@ -477,9 +447,9 @@
                 <div class="common-wrap2">
                     <span></span>
                     <span animate-in="fade-in" id="third-animation">最佳女主角</span>
-                    <span animate-in="fly-in-left" animate-in-duration=400 animate-in-after="third-animation" id="third-animation-2">弗兰西斯·麦克多蒙德</span>
-                    <span animate-in="fly-in-left" animate-in-duration=400 animate-in-after="third-animation-2">主演</span>
-                    <span animate-in="fly-in-left" animate-in-duration=400 animate-in-after="third-animation-2">三块广告牌</span>
+                    <span animate-in="fade-in-left" animate-in-duration=400 animate-in-after="third-animation" id="third-animation-2">弗兰西斯·麦克多蒙德</span>
+                    <span animate-in="fade-in-left" animate-in-duration=400 animate-in-after="third-animation-2">主演</span>
+                    <span animate-in="fade-in-left" animate-in-duration=400 animate-in-after="third-animation-2">三块广告牌</span>
                 </div>
             </mip-story-layer>
             <mip-story-layer>
@@ -494,9 +464,9 @@
                 <div class="common-wrap2">
                     <span></span>
                     <span animate-in="fade-in" id="fourth-animation">最佳男配角</span>
-                    <span animate-in="fly-in-left" animate-in-duration=400 animate-in-after="fourth-animation" id="fourth-animation-2">山姆·洛克威尔</span>
-                    <span animate-in="fly-in-left" animate-in-duration=400 animate-in-after="fourth-animation-2">主演</span>
-                    <span animate-in="fly-in-left" animate-in-duration=400 animate-in-after="fourth-animation-2">三块广告牌</span>
+                    <span animate-in="fade-in-left" animate-in-duration=400 animate-in-after="fourth-animation" id="fourth-animation-2">山姆·洛克威尔</span>
+                    <span animate-in="fade-in-left" animate-in-duration=400 animate-in-after="fourth-animation-2">主演</span>
+                    <span animate-in="fade-in-left" animate-in-duration=400 animate-in-after="fourth-animation-2">三块广告牌</span>
                 </div>
             </mip-story-layer>
             <mip-story-layer>
@@ -511,9 +481,9 @@
                 <div class="common-wrap2">
                     <span></span>
                     <span animate-in="fade-in" id="fiveth-animation">最佳女配角</span>
-                    <span animate-in="fly-in-left" animate-in-duration=400 animate-in-after="fiveth-animation" id="fiveth-animation-2">艾莉森·珍妮</span>
-                    <span animate-in="fly-in-left" animate-in-duration=400 animate-in-after="fiveth-animation-2">主演</span>
-                    <span animate-in="fly-in-left" animate-in-duration=400 animate-in-after="fiveth-animation-2">我，花样女王</span>
+                    <span animate-in="fade-in-left" animate-in-duration=400 animate-in-after="fiveth-animation" id="fiveth-animation-2">艾莉森·珍妮</span>
+                    <span animate-in="fade-in-left" animate-in-duration=400 animate-in-after="fiveth-animation-2">主演</span>
+                    <span animate-in="fade-in-left" animate-in-duration=400 animate-in-after="fiveth-animation-2">我，花样女王</span>
                 </div>
             </mip-story-layer>
             <mip-story-layer>
@@ -528,146 +498,10 @@
                 <div class="common-wrap1">
                     <span></span>
                     <span animate-in="fade-in" id="sixth-animation">最佳动画短片</span>
-                    <span animate-in="fly-in-left" animate-in-duration=400 animate-in-after="sixth-animation">亲爱的篮球</span>
+                    <span animate-in="fade-in-left" animate-in-duration=400 animate-in-after="sixth-animation">亲爱的篮球</span>
                     <span></span>
                     <span animate-in="fade-in" id="sixth-animation">最佳动画长片</span>
-                    <span animate-in="fly-in-right" animate-in-duration=400 animate-in-after="sixth-animation">寻梦环游记</span>
-                </div>
-            </mip-story-layer>
-            <mip-story-layer>
-                <div class="mask"></div>
-            </mip-story-layer>
-        </mip-story-view>
-        <mip-story-view>
-            <mip-story-layer template="fill">
-                <mip-img  layout="responsive" class="fade-in" src="https://www.mipengine.org/static/img/mip-story/p8.png"></mip-img>
-            </mip-story-layer>
-            <mip-story-layer>
-                <div class="common-wrap3">
-                    <span></span>
-                    <span>其他奖项</span>
-                    <div>
-                        <div class="role">
-                            <span>最佳改编剧本</span>
-                            <span>请以你的名字呼唤我</span>
-                        </div>
-                        <div class="role">
-                            <span>最佳原创剧本</span>
-                            <span>逃出绝命镇</span>
-                        </div>
-                        <div class="role">
-                            <span>最佳外语片</span>
-                            <span>普通女人</span>
-                        </div>
-                        <div class="role">
-                            <span>最佳纪录长片</span>
-                            <span class="noBottom">伊卡洛斯</span>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="role">
-                            <span>最佳纪录短片</span>
-                            <span>天堂堵塞</span>
-                        </div>
-                        <div class="role">
-                            <span>最佳真人短片</span>
-                            <span>沉默的孩子</span>
-                        </div>
-                        <div class="role">
-                            <span>最佳原创配乐</span>
-                            <span>水形物语</span>
-                        </div>
-                        <div class="role">
-                            <span>最佳原创歌曲</span>
-                            <span class="noBottom">寻梦环游记 / Remember Me</span>
-                        </div>
-                    </div>
-                </div>
-            </mip-story-layer>
-            <mip-story-layer>
-                <div class="mask"></div>
-            </mip-story-layer>
-        </mip-story-view>
-        <mip-story-view>
-            <mip-story-layer template="fill">
-                <mip-img  layout="responsive" class="fade-in" src="https://www.mipengine.org/static/img/mip-story/p8.png"></mip-img>
-            </mip-story-layer>
-            <mip-story-layer>
-                <div class="common-wrap3">
-                    <span></span>
-                    <span>技术奖</span>
-                    <div>
-                        <div class="role">
-                            <span>最佳剪辑</span>
-                            <span>敦刻尔克</span>
-                        </div>
-                        <div class="role">
-                            <span>最佳摄影</span>
-                            <span>银翼杀手2049</span>
-                        </div>
-                        <div class="role">
-                            <span>最佳视觉效果</span>
-                            <span>银翼杀手2049</span>
-                        </div>
-                        <div class="role">
-                            <span>最佳艺术指导</span>
-                            <span class="noBottom">水形物语</span>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="role">
-                            <span>最佳服装设计</span>
-                            <span>霓裳魅影</span>
-                        </div>
-                        <div class="role">
-                            <span>最佳声效剪辑</span>
-                            <span>敦刻尔克</span>
-                        </div>
-                        <div class="role">
-                            <span>最佳音响效果</span>
-                            <span>敦刻尔克</span>
-                        </div>
-                        <div class="role">
-                            <span>最佳化妆与发型设计</span>
-                            <span class="noBottom">至暗时刻</span>
-                        </div>
-                    </div>
-                </div>
-            </mip-story-layer>
-            <mip-story-layer>
-                <div class="mask"></div>
-            </mip-story-layer>
-        </mip-story-view>
-        <mip-story-view>
-            <mip-story-layer template="fill">
-                <mip-img  layout="responsive" class="fade-in" src="https://www.mipengine.org/static/img/mip-story/p8.png"></mip-img>
-            </mip-story-layer>
-            <mip-story-layer>
-                <div class="common-wrap3">
-                    <span></span>
-                    <span>成就奖</span>
-                    <div class="last-animation">
-                        <div class="role">
-                            <span>特别成就奖</span>
-                            <span>肉与沙</span>
-                        </div>
-                        <div class="role">
-                            <span>终身成就奖／导演</span>
-                            <span>查尔斯·伯内特</span>
-                        </div>
-                        <div class="role">
-                            <span>终身成就奖／摄影师</span>
-                            <span>欧文·罗兹曼</span>
-                        </div>
-                        <div class="role">
-                            <span>终身成就奖／演员</span>
-                            <span>唐纳德·萨瑟兰</span>
-                        </div>
-                        <div class="role">
-                            <span>终身成就奖／导演</span>
-                            <span class="noBottom">阿涅斯·瓦尔达</span>
-                        </div>
-                    </div>
+                    <span animate-in="fade-in-right" animate-in-duration=400 animate-in-after="sixth-animation">寻梦环游记</span>
                 </div>
             </mip-story-layer>
             <mip-story-layer>
@@ -699,7 +533,7 @@
     </script>
     <script src="https://c.mipcdn.com/static/v1/mip.js"></script>
     <script src="https://c.mipcdn.com/static/v1/mip-share/mip-share.js"></script>
-    <script src="https://c.mipcdn.com/static/v1/mip-story/mip-story.js"></script>
+    <script src="./mip-story.js"></script>
     <script src="https://c.mipcdn.com/static/v1/mip-stats-baidu/mip-stats-baidu.js"></script>
     <script src="https://c.mipcdn.com/extensions/platform/v1/mip-cambrian/mip-cambrian.js"></script>
 </body>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html mip>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <title>MIP page</title>
+    <link rel="canonical" href="对应的原页面地址">
+    <link rel="stylesheet" href="https://c.mipcdn.com/static/v2/mip.css">
+    <style mip-custom>
+    /* 自定义样式 */
+    </style>
+  </head>
+  <body>
+    <mip-data>
+      <script type="application/json">
+        {
+          "slots": [{
+            flex: 1,
+            values: ['1984', '1985', '1986', '1987', '1988', '1989', '1990', '1991', '1992', '1993', '1994', '1995'],
+            className: 'slot1',
+            level: 1
+          }]
+        }
+      </script>
+    </mip-data>
+    <div>
+      <mip-test id="mip-test"></mip-test>
+      <div on="tap:my-lightbox0.toggle">点击打开默认时间选择器</div>
+      <br/>
+      <div on="tap:my-lightbox1.toggle">点击打开日期选择器</div>
+      <br/>
+      <div on="tap:my-lightbox2.toggle">点击打开时间选择器</div>
+      <br/>
+      <div on="tap:my-lightbox3.toggle">打开日期选择器，制定开始和结束的年份
+      </div>
+      <br/>
+      <div on="tap:my-lightbox4.toggle">
+      打开一个单选框
+      </div>
+      <br/>
+
+      mip-picker-date是一个 日期+时间的选择组件。
+      <br/>
+      配合 mip-lightbox 的 你可以完成一个可展开收起的日期选择组件
+      <br/>
+      type="date"
+      日期选择按钮，默认格式年-月-日，点击确认按钮，触发confirm事件，返回数据是一个标准格式的时间对象
+      <br/>
+      type="datetime"
+      日期和时间选择按钮，默认格式年-月-日-时-分，点击确认按钮，触发confirm事件，返回数据是一个标准格式的时间对象
+      <br/>
+      type="time"
+      时间选择器期，默认格式时-分，点击确认按钮，触发confirm事件，返回数据是一个字符串"12:06"
+      <br/>
+
+      </div>
+      <br>
+      <!--这个示例演示了一个日期选择期的用法，制定type="date"-->
+      <mip-lightbox id="my-lightbox1" layout="nodisplay" position="bottom">
+        <mip-picker-date year-format="{value} 年"
+          month-format="{value} 月"
+          date-format="{value} 日"
+          type="date"
+          on="cancelDate:my-lightbox2.toggle confirmDate:my-lightbox2.toggle"
+        >
+        </mip-picker-date>
+      </mip-lightbox>
+      <!--这个示例演示了一个日期+时间选择期的用法，并演示了下如何在confirm回调中做处理逻辑-->
+      <mip-lightbox id="my-lightbox0" layout="nodisplay" position="bottom">
+        <mip-picker-date
+          on="cancelDate:my-lightbox0.toggle confirmDate:my-lightbox0.toggle
+          confirmDate:mip-test.pickerChange"
+        >
+        </mip-picker-date>
+      </mip-lightbox>
+      <!--这个示例演示了一个时间选择期的用法-->
+      <mip-lightbox id="my-lightbox2" layout="nodisplay" position="bottom">
+        <mip-picker-date hour-format="{value} 时"
+          minute-format="{value} 分"
+          type="time"
+          on="cancelDate:my-lightbox2.toggle confirmDate:my-lightbox2.toggle"
+        >
+        </mip-picker-date>
+      </mip-lightbox>
+      <!--这个示例演示了一个时间选择期的用法-->
+      <mip-lightbox id="my-lightbox3" layout="nodisplay" position="bottom">
+        <mip-picker-date
+          type="date"
+          start-year=1998
+          end-year=2050
+          on="cancelDate:my-lightbox3.toggle confirmDate:my-lightbox3.toggle"
+        >
+        </mip-picker-date>
+      </mip-lightbox>
+      <!--这里演示了如何配置一个单选框-->
+      <mip-lightbox id="my-lightbox4" layout="nodisplay" position="bottom">
+        <mip-picker m-bind:slots="slots"
+          on="confirm:mip-test.singlePickerChange confirm:my-lightbox4.toggle" show-toolbar="true">
+        </mip-picker>
+      </mip-lightbox>
+    </div>
+    <!--下面这三个js是必须要引入的-->
+    <script src="https://c.mipcdn.com/static/v2/mip.js"></script>
+    <script src="http://mip-extensions.bj.bcebos.com/js%2Fmip-picker.js"></script>
+    <script src="http://mip-extensions.bj.bcebos.com/js%2Fmip-test.js"></script>
+    <script type="text/javascript" src="http://mip-extensions.bj.bcebos.com/js%2Fmip-lightbox.js"></script>
+  </body>
+</html>
